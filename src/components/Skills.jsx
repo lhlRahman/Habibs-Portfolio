@@ -17,13 +17,12 @@ import TypeScript from '../assets/ts.png';
 import Neon from '../assets/neon.webp';
 const Skills = () => {
   return (
-    <div>
-    <div className="mt-16"></div>
-    <div className='sm: mt-16 md:mt-10'></div>
     <div name='skills' className='w-full h-screen bg-[#0a192f] text-gray-300'>
       {/* Container */}
       <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
           <div>
+            <div className="mt-16"></div>
+            <div className='sm: mt-16 md:mt-10'></div>
               <p className='text-4xl font-bold inline border-b-4 border-pink-600 '>Skills</p>
               <p className='py-4'>These are most of the technologies I've worked with</p>
           </div>
@@ -91,7 +90,6 @@ const Skills = () => {
               </div>
           </div>
       </div>
-    </div>
     </div>
   );
 };

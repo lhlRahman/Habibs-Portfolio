@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   FaBars,
   FaTimes,
@@ -9,8 +9,8 @@ import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { Link } from 'react-scroll';
 
-const Navbar = () => {
-  const [nav, setNav] = useState(false);
+const Navbar = (props) => {
+  const { nav, setNav } = props
   const handleClick = () => setNav(!nav);
 
   return (
