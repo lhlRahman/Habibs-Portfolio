@@ -100,7 +100,9 @@ const Navbar = () => {
           <li className='w-[170px] h-[60px] flex justify-between items-center ml-[-110px] hover:ml-[0px] duration-300 bg-blue-600'>
             <a
               className='ml-2 flex justify-between items-center w-full text-gray-300 '
-              href='/'
+              href='https://www.linkedin.com/in/habib-rahman-tmu/'
+              target='_blank'
+              rel='noreferrer'
             >
               Linkedin <FaLinkedin className='mr-4' size={30} />
             </a>
@@ -108,7 +110,9 @@ const Navbar = () => {
           <li className='w-[170px] h-[60px] flex justify-between items-center ml-[-110px] hover:ml-[0px] duration-300 bg-[#333333]'>
             <a
               className='ml-2 flex justify-between items-center w-full text-gray-300 '
-              href='/'
+              href='https://github.com/lhlRahman'
+              target='_blank'
+              rel='noreferrer'
             >
               GitHub <FaGithub className='mr-4' size={30} />
             </a>
@@ -116,7 +120,7 @@ const Navbar = () => {
           <li className='w-[170px] h-[60px] flex justify-between items-center ml-[-110px] hover:ml-[0px] duration-300 bg-[#6fc2b0]'>
             <a
               className='ml-2 flex justify-between items-center w-full text-gray-300 '
-              href='/'
+              href='mailto:habib.rahman@toroontomu.ca'
             >
               Email <HiOutlineMail className='mr-4' size={30} />
             </a>
@@ -124,7 +128,9 @@ const Navbar = () => {
           <li className='w-[170px] h-[60px] flex justify-between items-center ml-[-110px] hover:ml-[0px] duration-300 bg-[#565f69]'>
             <a
               className='ml-2 flex justify-between items-center w-full text-gray-300 '
-              href='/'
+              href='https://drive.google.com/file/d/1pkqNRFVA-PwbxB67oY0QhqO55iUzuWdG/view?usp=sharing'
+              target='_blank'
+              rel='noreferrer'
             >
               Resume <BsFillPersonLinesFill className='mr-4' size={30} />
             </a>
