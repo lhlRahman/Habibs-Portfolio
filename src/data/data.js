@@ -15,7 +15,7 @@ export const data=[
         id:2,
         name:"Local Market",
         image:LocalMarket,
-        github:"",
+        github:"https://github.com/lhlRahman/LocalMarket",
         live:"",
     },
     {

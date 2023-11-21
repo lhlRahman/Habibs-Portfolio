@@ -14,11 +14,11 @@ const About = () => {
           </div>
           <div className='max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4 mb-64'>
             <div className='sm:text-right text-4xl font-bold'>
-              <p>Hi. I'm Habib Rahman, nice to meet you. Take a look around.</p>
+              <p>Hi. nice to meet you. Take a look around.</p>
             </div>
             <div>
               <p className='font-serif font'>
-                My name is Habib Rahman, I am currently a first year Computer Science student at Toronto Metroplitan University (Formerly known as Ryerson). When I'm not forced into coding at school, I code in my free time, working on my projects. At night I protect Gotham City. I love to learn new things and work with new technologies, I'm always looking for new opportunities to learn and grow. I'm currently looking for a summer internship for the summer of 2024.
+                I am currently a first year Computer Science student at Toronto Metroplitan University (Formerly known as Ryerson). When I'm not forced into coding at school, I code in my free time, working on my projects. At night I protect Gotham City. I love to learn new things and work with new technologies, I'm always looking for new opportunities to learn and grow. I'm currently looking for a summer internship for the summer of 2024.
               </p>  
               <hr className='mt-8' />
             </div>
