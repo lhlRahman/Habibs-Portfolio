@@ -23,7 +23,7 @@ export const data=[
         name:"Habib's Blog",
         image: Habibsblog,
         github:"https://github.com/lhlRahman/MyBlog",
-        live:"",
+        live:"https://whoishabib.com/",
     },
     {
         id:4,
