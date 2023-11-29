@@ -12,4 +12,7 @@
     padding-left: 4px;
     cursor: pointer;
   }
+  .font-system-ui {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
 }

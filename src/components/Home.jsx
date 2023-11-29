@@ -13,7 +13,7 @@ const Home = (props) => {
         <p className='text-pink-600'> Hi 👋, my name is</p>
         <h1 className='text-5xl sm:text 7xl font-bold text-[#ccd6f6]'>Habib Rahman</h1>
         <span className='inline-block text-5xl sm:text 7xl font-bold text-[#8892b0]'>
-          I'm {nav === false && (<p className='font-sans'> <TitleTypeWriter /> </p>)}
+          I'm {nav === false && (<p className='font-system-ui'> <TitleTypeWriter /> </p>)}
         </span>
         <p className='text-blue-50 py-4 max-w-[700px]'>
             Welcome to my portfolio, a platform where I showcase my current and past projects. feel free to look around and contact me for any inquiries.        
