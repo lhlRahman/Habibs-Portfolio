@@ -7,7 +7,7 @@ const Home = (props) => {
   const { nav } = props
 
   return (
-    <div name='home' className='w-full min-h-screen bg-[#0a192f]'>
+    <div name='home' className='w-full h-3/6 bg-[#0a192f]'>
       <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
         <div className="mt-32"></div>
         <p className='text-pink-600'> Hi 👋, my name is</p>
