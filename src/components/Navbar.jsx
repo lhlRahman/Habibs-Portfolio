@@ -22,9 +22,9 @@ const Navbar = (props) => {
       </div>
 
       {/* menu */}
-      <ul className='hidden md:flex'>
+      <ul className='lg:flex md:flex xl:flex 2xl:flex sm:hidden'>
         <li className='mr-4'>
-          <Link to='home' smooth={true} duration={500} className="hover:text-red-900">
+          <Link to='home' smooth={true} duration={500} className=" hover:text-red-900">
             Home
           </Link>
         </li>
@@ -95,7 +95,7 @@ const Navbar = (props) => {
       </ul>
 
       {/* Social icons */}
-      <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
+      <div className='lg:flex xl:flex 2xl:flex sm:hidden fixed flex-col top-[35%] left-0'>
         <ul>
           <li className='w-[170px] h-[60px] flex justify-between items-center ml-[-110px] hover:ml-[0px] duration-300 bg-blue-600'>
             <a
