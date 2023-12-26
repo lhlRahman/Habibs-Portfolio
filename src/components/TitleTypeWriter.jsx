@@ -10,6 +10,7 @@ const TitleTypeWriter = () => {
     <TypeWriter
       options={{
         loop: true,
+        cursor: ''
       }}
       onInit={(typewriter) => {
         typewriter

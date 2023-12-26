@@ -5,24 +5,27 @@ import {
   FaGithub,
   FaLinkedin
 } from 'react-icons/fa';
+import { MdOutlineNightlight, MdNightlight } from "react-icons/md";
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { Link } from 'react-scroll';
 
 const Navbar = (props) => {
-  const { nav, setNav } = props
-  const handleClick = () => setNav(!nav);
+  const { nav, light, setLight, handleClick} = props
+  const handleColor = () => setLight(!light);
+
+ const navbarClass = light ? 'bg-white text-black' : 'bg-[#0a192f] text-gray-300';
+ const hoverClass = light ? 'hover:text-blue-900' : 'hover:text-red-900';
 
   return (
-    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300'>
+    <div className={`fixed w-full h-[80px] flex justify-between items-center px-4 ${navbarClass} z-30`}>
       <div>
-      <h1 className="text-4xl font-extrabold text-gray-300 hover:text-red-900 ">
+      <h1 className={`text-4xl font-extrabold ${navbarClass} ${hoverClass}`}>
         Habib
       </h1>
       </div>
-
       {/* menu */}
-      <ul className='lg:flex md:flex xl:flex 2xl:flex sm:hidden'>
+      <ul className={`md:flex md:visible collapse ${navbarClass}`}>
         <li className='mr-4'>
           <Link to='home' smooth={true} duration={500} className=" hover:text-red-900">
             Home
@@ -48,6 +51,9 @@ const Navbar = (props) => {
             Contact
           </Link>
         </li>
+        <li className='mr-4 rotate-45' onClick={handleColor}>
+          {light ? <MdNightlight className='text-2xl cursor-pointer -rotate-180' /> : <MdOutlineNightlight className='text-2xl cursor-pointer -rotate-180' />}
+        </li>
       </ul>
 
       {/* Hamburger */}
@@ -60,7 +66,7 @@ const Navbar = (props) => {
         className={
           !nav
             ? 'hidden'
-            : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center'
+            : `absolute top-0 left-0 w-full h-screen flex flex-col justify-center items-center ${navbarClass}`
         }
       >
         <li className='py-6 text-4xl'>
@@ -92,10 +98,14 @@ const Navbar = (props) => {
             Contact
           </Link>
         </li>
+        <li className='rotate-45' onClick={handleColor}>
+          {' '}
+          {light ? <MdNightlight className='text-4xl cursor-pointer -rotate-180' /> : <MdOutlineNightlight className='text-4xl cursor-pointer -rotate-180' />}
+       </li>
       </ul>
 
       {/* Social icons */}
-      <div className='lg:flex xl:flex 2xl:flex sm:hidden fixed flex-col top-[35%] left-0'>
+      <div className='collapse lg:flex lg:visible fixed flex-col top-[35%] left-0'>
         <ul>
           <li className='w-[170px] h-[60px] flex justify-between items-center ml-[-110px] hover:ml-[0px] duration-300 bg-blue-600'>
             <a

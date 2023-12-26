@@ -7,17 +7,17 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 function App() {
   const [nav, setNav] = useState(false);
+  const [light, setLight] = useState(false);
   const handleClick = () => setNav(!nav);
-
 
   return (
     <div className="App"> 
-      <Navbar nav={nav} setNav={setNav} />
-      <Home nav={nav} />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
+      <Navbar nav={nav} setNav={setNav} handleClick={handleClick} light={light} setLight={setLight} />
+      <Home light={light} />
+      <About light={light} />
+      <Skills light={light} />
+      <Projects light={light} />
+      <Contact light={light} />
       
     </div>
     
