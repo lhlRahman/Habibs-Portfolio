@@ -29,7 +29,7 @@ const Home = ({ light }) => {
             </button>
           </Link>
         </div>
-        <hr className='mt-8' />
+        <hr className='my-10' name='about' />
       </div>
     </div>
   );

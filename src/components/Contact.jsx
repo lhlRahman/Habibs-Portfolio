@@ -8,7 +8,7 @@ const Contact = ({ light }) => {
   
 
   return (
-    <div name='contact' className={`w-full h-3/6 ${contactClass} flex justify-center items-center p-4`}>
+    <div className={`w-full h-3/6 ${contactClass} flex justify-center items-center p-4`}>
       <form method='POST' action="https://getform.io/f/8635160a-ade1-40fb-91c4-20b887ce3345" className='flex flex-col max-w-[600px] w-full'>
         <div className='pb-8'>
           <p className={`text-4xl font-bold inline border-b-4 w-fit ${borderClass}`}>Contact</p>

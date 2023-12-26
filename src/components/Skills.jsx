@@ -20,7 +20,7 @@ const Skills = ({ light }) => {
     const shadowClass = light ? 'shadow-md shadow-gray-300 hover:scale-110 duration-500' : 'shadow-md shadow-[#040c16] hover:scale-110 duration-500';
   
     return (
-      <div name='skills' className={`w-full h-3/6 ${skillsClass}`}>
+      <div className={`w-full h-3/6 ${skillsClass}`}>
         <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
           <div>
             <p className={`text-4xl font-bold inline border-b-4 ${borderClass}`}>Skills</p>
@@ -90,6 +90,7 @@ const Skills = ({ light }) => {
             <p className='my-4'>Neon DB</p>
             </div>
          </div>
+         <hr name='work' className='my-16' />
         </div>
     </div>
     );

@@ -9,7 +9,7 @@ const Projects = ({ light }) => {
   const buttonClass = light ? 'bg-gray-300 text-gray-700' : 'bg-white text-gray-700';
 
   return (
-    <div name='work' className={`w-full h-3/6 ${projectsClass}`}>
+    <div className={`w-full h-3/6 ${projectsClass}`}>
       <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
         <p className={`max-w-fit text-4xl font-bold inline border-b-4 ${borderClass}`}>
           Projects
@@ -52,6 +52,7 @@ const Projects = ({ light }) => {
             </div>
           ))}
         </div>
+        <hr name='contact' className='my-16' />
       </div>
     </div>
   );
