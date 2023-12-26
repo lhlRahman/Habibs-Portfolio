@@ -11,7 +11,7 @@ const Projects = ({ light }) => {
   return (
     <div name='work' className={`w-full h-3/6 ${projectsClass}`}>
       <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
-        <p className={`text-4xl font-bold inline ${borderClass}`}>
+        <p className={`max-w-fit text-4xl font-bold inline border-b-4 ${borderClass}`}>
           Projects
         </p>
         <p className='py-6'>Check out some of my recent Projects</p>

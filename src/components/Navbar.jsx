@@ -18,7 +18,7 @@ const Navbar = (props) => {
  const hoverClass = light ? 'hover:text-blue-900' : 'hover:text-red-900';
 
   return (
-    <div className={`fixed w-full h-[80px] flex justify-between items-center px-4 ${navbarClass} z-30`}>
+    <div className={`fixed w-full h-[80px] shadow-sm flex justify-between items-center px-4 ${navbarClass} z-30`}>
       <div>
       <h1 className={`text-4xl font-extrabold ${navbarClass} ${hoverClass}`}>
         Habib
