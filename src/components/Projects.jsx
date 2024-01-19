@@ -1,4 +1,5 @@
 import { data } from "../data/data.js";
+import OnScroll from "./OnScroll.jsx";
 
 const Projects = ({ light }) => {
   const project = data;

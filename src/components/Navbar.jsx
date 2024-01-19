@@ -9,6 +9,7 @@ import { MdOutlineNightlight, MdNightlight } from "react-icons/md";
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { Link } from 'react-scroll';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = (props) => {
   const { nav, light, setLight, handleClick} = props
@@ -20,12 +21,20 @@ const Navbar = (props) => {
   return (
     <div className={`fixed w-full h-[80px] shadow-sm flex justify-between items-center px-4 ${navbarClass} z-30`}>
       <div>
-      <h1 className={`text-4xl font-extrabold ${navbarClass} ${hoverClass}`}>
+      <motion.h1 className={`text-4xl font-extrabold ${navbarClass}`}
+        initial={{ x: 10000 }}
+        animate={{ x: 0 }}
+        transition={{ duration: 1 }}
+      >
         Habib
-      </h1>
+      </motion.h1>
       </div>
       {/* menu */}
-      <ul className={`md:flex md:visible collapse ${navbarClass}`}>
+      <motion.ul className={`md:flex md:visible collapse ${navbarClass}`}
+      initial={{ y: -1000 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 1 }}
+      >
         <li className='mr-4'>
           <Link to='home' smooth={true} duration={500} className=" hover:text-red-900">
             Home
@@ -54,7 +63,7 @@ const Navbar = (props) => {
         <li className='mr-4 rotate-45' onClick={handleColor}>
           {light ? <MdNightlight className='text-2xl cursor-pointer -rotate-180' /> : <MdOutlineNightlight className='text-2xl cursor-pointer -rotate-180' />}
         </li>
-      </ul>
+      </motion.ul>
 
       {/* Hamburger */}
       <div onClick={handleClick} className='md:hidden z-10'>

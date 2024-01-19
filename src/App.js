@@ -5,18 +5,26 @@ import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import { motion } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
+import FullPageTextSpinnerLoader from './components/FullSpinner';
 
 function App() {
   const [nav, setNav] = useState(false);
-
-  // Initialize the light state based on localStorage, default to false
+  const [isLoading, setIsLoading] = useState(true);
   const [light, setLight] = useState(() => {
     const storedLight = localStorage.getItem('light');
     return storedLight !== null ? JSON.parse(storedLight) : false;
   });
 
   useEffect(() => {
-    // Retrieve the stored nav state from localStorage
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
     const storedNav = localStorage.getItem('nav');
     if (storedNav) {
       setNav(JSON.parse(storedNav));
@@ -24,26 +32,59 @@ function App() {
   }, []);
 
   useEffect(() => {
-    // Store the nav state in localStorage whenever it changes
     localStorage.setItem('nav', JSON.stringify(nav));
   }, [nav]);
 
   useEffect(() => {
-    // Store the light state in localStorage whenever it changes
     localStorage.setItem('light', JSON.stringify(light));
   }, [light]);
 
   const handleClick = () => setNav(!nav);
 
+    // Animation Variants for the blocks
+    const blockVariants = {
+      initial: { y: 10, opacity: 0 },
+      animate: { y: 0, opacity: 1, transition: { duration: 0.8 } },
+      exit: { y: -10, opacity: 0, transition: { duration: 0.5 } }
+    };
+  
+    // Animation Variants for the text
+    const textVariants = {
+      initial: { scale: 0 },
+      animate: { 
+        scale: 1, 
+        transition: { 
+          delay: 0.8, 
+          type: "spring", 
+          stiffness: 260, 
+          damping: 20 
+        }
+      },
+      exit: { scale: 0, transition: { duration: 0.5 } }
+    };
+  
+    if (isLoading) {
+      return (
+        <section className="w-full h-screen flex flex-col items-center justify-center bg-gradient-to-r  animate-pulse">
+           <FullPageTextSpinnerLoader />
+        </section>
+      );
+    }
+
   return (
-    <div className="App"> 
+    <motion.div className="App"
+        initial={{ opacity: 0, y: 15 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 15 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+    >
       <Navbar nav={nav} setNav={setNav} handleClick={handleClick} light={light} setLight={setLight} />
       <Home light={light} />
       <About light={light} />
       <Skills light={light} />
       <Projects light={light} />
       <Contact light={light} />
-    </div>
+    </motion.div>
   );
 }
 
