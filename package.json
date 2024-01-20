@@ -9,6 +9,7 @@
     "animejs": "^3.2.2",
     "autoprefixer": "^10.4.4",
     "framer-motion": "^10.18.0",
+    "lottie-web": "^5.12.2",
     "postcss": "^8.4.12",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

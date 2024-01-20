@@ -1,9 +1,8 @@
 import { data } from "../data/data.js";
-import OnScroll from "./OnScroll.jsx";
 
 const Projects = ({ light }) => {
   const project = data;
-  const projectsClass = light ? 'bg-grey-500 text-black' : 'bg-[#0a192f] text-gray-300';
+  const projectsClass = light ? 'bg-[#51b7d3] text-white' : 'bg-[#0a192f] text-gray-300';
   const borderClass = light ? 'border-blue-600' : 'border-pink-600';
   const shadowClass = light ? 'shadow-lg shadow-gray-300' : 'shadow-lg shadow-[#040c16]';
   const projectTextClass = light ? 'text-gray-900' : 'text-[#0a192f]';

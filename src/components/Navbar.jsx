@@ -9,17 +9,26 @@ import { MdOutlineNightlight, MdNightlight } from "react-icons/md";
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { Link } from 'react-scroll';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
+import AnimationComponent from './light';
+import { useState, useEffect } from 'react';
 
 const Navbar = (props) => {
   const { nav, light, setLight, handleClick} = props
   const handleColor = () => setLight(!light);
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
 
- const navbarClass = light ? 'bg-white text-black' : 'bg-[#0a192f] text-gray-300';
+  useEffect(() => {
+    const handleResize = () => setWindowSize(window.innerWidth);
+    handleResize();
+  }, [window.innerHeight]);
+    
+
+ const navbarClass = light ? ' bg-[#51b7d3] text-white' : 'bg-[#0a192f] text-gray-300';
  const hoverClass = light ? 'hover:text-blue-900' : 'hover:text-red-900';
 
   return (
-    <div className={`fixed w-full h-[80px] shadow-sm flex justify-between items-center px-4 ${navbarClass} z-30`}>
+    <div className={`fixed w-full h-[120px] shadow-sm flex justify-between items-center px-4 ${navbarClass} z-30`}>
       <div>
       <motion.h1 className={`text-4xl font-extrabold ${navbarClass}`}
         initial={{ x: 10000 }}
@@ -30,7 +39,7 @@ const Navbar = (props) => {
       </motion.h1>
       </div>
       {/* menu */}
-      <motion.ul className={`md:flex md:visible collapse ${navbarClass}`}
+      <motion.ul className={`md:visible collapse flex ${navbarClass}`}
       initial={{ y: -1000 }}
       animate={{ y: 0 }}
       transition={{ duration: 1 }}
@@ -60,10 +69,16 @@ const Navbar = (props) => {
             Contact
           </Link>
         </li>
-        <li className='mr-4 rotate-45' onClick={handleColor}>
-          {light ? <MdNightlight className='text-2xl cursor-pointer -rotate-180' /> : <MdOutlineNightlight className='text-2xl cursor-pointer -rotate-180' />}
+        <li className='mr-2' >
         </li>
       </motion.ul>
+
+        <AnimationComponent
+          onClick={handleColor}
+          light={light}
+          setLight={setLight}
+          style={'md:grid hidden'}
+        />
 
       {/* Hamburger */}
       <div onClick={handleClick} className='md:hidden z-10'>
@@ -107,9 +122,13 @@ const Navbar = (props) => {
             Contact
           </Link>
         </li>
-        <li className='rotate-45' onClick={handleColor}>
-          {' '}
-          {light ? <MdNightlight className='text-4xl cursor-pointer -rotate-180' /> : <MdOutlineNightlight className='text-4xl cursor-pointer -rotate-180' />}
+        <li>
+        <AnimationComponent
+          onClick={handleColor}
+          className='visible'
+          light={light}
+          setLight={setLight}
+        />
        </li>
       </ul>
 
