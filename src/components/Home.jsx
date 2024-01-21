@@ -1,10 +1,8 @@
 import React from 'react';
 import TitleTypeWriter from './TitleTypeWriter';
-import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
 import { Link } from 'react-scroll';
 import WordRotate from './WordRotate';
 import Button from './Button';
-import { list } from 'postcss';
 
 const Home = ({ light }) => {
   const homeClass = light ? 'bg-[#51b7d3] text-white' : 'bg-[#0a192f] text-blue-50';

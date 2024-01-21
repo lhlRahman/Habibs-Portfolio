@@ -6,7 +6,7 @@ const Button = ({children}) => {
   return (
     <div className="container">
       <button className={`button`}>
-        <span className="button__text">{children}</span>
+        <h1 className="button__text">{children}</h1>
       </button>
     </div>
   );
