@@ -5,27 +5,21 @@ import {
   FaGithub,
   FaLinkedin
 } from 'react-icons/fa';
-import { MdOutlineNightlight, MdNightlight } from "react-icons/md";
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
 import AnimationComponent from './light';
-import { useState, useEffect } from 'react';
-
+import HoverText from './HoverText';
 const Navbar = (props) => {
   const { nav, light, setLight, handleClick} = props
   const handleColor = () => setLight(!light);
-  const [windowSize, setWindowSize] = useState(window.innerWidth);
-
-  useEffect(() => {
-    const handleResize = () => setWindowSize(window.innerWidth);
-    handleResize();
-  }, [window.innerHeight]);
     
 
  const navbarClass = light ? ' bg-[#51b7d3] text-white' : 'bg-[#0a192f] text-gray-300';
- const hoverClass = light ? 'hover:text-blue-900' : 'hover:text-red-900';
+ const hover = light ? '#51b7d3':'#0a192f';
+ const text = light ? 'black':'#9dd9f3';
+
 
   return (
     <div className={`fixed w-full h-[120px] shadow-sm flex justify-between items-center px-4 ${navbarClass} z-30`}>
@@ -35,7 +29,7 @@ const Navbar = (props) => {
         animate={{ x: 0 }}
         transition={{ duration: 1 }}
       >
-        Habib
+        <HoverText color={hover} text={text}>Habib</HoverText>
       </motion.h1>
       </div>
       {/* menu */}
@@ -45,31 +39,29 @@ const Navbar = (props) => {
       transition={{ duration: 1 }}
       >
         <li className='mr-4'>
-          <Link to='home' smooth={true} duration={500} className=" hover:text-red-900">
-            Home
+          <Link to='home' smooth={true} duration={500} className="">
+          <HoverText color={hover} text={text}>Home</HoverText>
           </Link>
         </li>
         <li className='mr-4'>
-          <Link to='about' smooth={true} duration={500} className="hover:text-red-900">
-            About
+          <Link to='about' smooth={true} duration={500} className="">
+          <HoverText color={hover} text={text}>About</HoverText>
           </Link>
         </li>
         <li className='mr-4'>
-          <Link to='skills' smooth={true} duration={500} className="hover:text-red-900">
-            Skills
+          <Link to='skills' smooth={true} duration={500} className="">
+          <HoverText color={hover} text={text}>Skills</HoverText>
           </Link>
         </li>
         <li className='mr-4'>
-          <Link to='work' smooth={true} duration={500} className="hover:text-red-900">
-            Projects
+          <Link to='work' smooth={true} duration={500} className="">
+          <HoverText color={hover} text={text}>Projects</HoverText>
           </Link>
         </li>
         <li className='mr-4'>
-          <Link to='contact' smooth={true} duration={500} className="hover:text-red-900">
-            Contact
+          <Link to='contact' smooth={true} duration={500} className="">
+          <HoverText color={hover} text={text}>Contact</HoverText>
           </Link>
-        </li>
-        <li className='mr-2' >
         </li>
       </motion.ul>
 
@@ -94,32 +86,32 @@ const Navbar = (props) => {
         }
       >
         <li className='py-6 text-4xl'>
-          <Link onClick={handleClick} to='home' smooth={true} duration={500} className="hover:text-red-900">
-            Home
+          <Link onClick={handleClick} to='home' smooth={true} duration={500} className="">
+          <HoverText>Home</HoverText>
           </Link>
         </li>
         <li className='py-6 text-4xl'>
           {' '}
-          <Link onClick={handleClick} to='about' smooth={true} duration={500} className="hover:text-red-900">
-            About
+          <Link onClick={handleClick} to='about' smooth={true} duration={500} className="">
+          <HoverText>About</HoverText>
           </Link>
         </li>
         <li className='py-6 text-4xl'>
           {' '}
-          <Link onClick={handleClick} to='skills' smooth={true} duration={500} className="hover:text-red-900">
-            Skills
+          <Link onClick={handleClick} to='skills' smooth={true} duration={500} className="">
+          <HoverText>Skills</HoverText>
           </Link>
         </li>
         <li className='py-6 text-4xl'>
           {' '}
-          <Link onClick={handleClick} to='work' smooth={true} duration={500} className="hover:text-red-900">
-            Projects
+          <Link onClick={handleClick} to='work' smooth={true} duration={500} className="">
+          <HoverText>Projects</HoverText>
           </Link>
         </li>
         <li className='py-6 text-4xl'>
           {' '}
-          <Link onClick={handleClick} to='contact' smooth={true} duration={500} className="hover:text-red-900">
-            Contact
+          <Link onClick={handleClick} to='contact' smooth={true} duration={500} className="">
+          <HoverText>Contact</HoverText>
           </Link>
         </li>
         <li>
@@ -178,5 +170,4 @@ const Navbar = (props) => {
     </div>
   );
 };
-
 export default Navbar;

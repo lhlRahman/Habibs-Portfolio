@@ -57,7 +57,7 @@ export default function AnimationComponent({ light, setLight, style }) {
   return (
     <div 
       onClick={handleAnimationToggle}
-      className={`cursor-pointer ${style} relative z-10 flex items-center gap-2`}
+      className={`cursor-pointer ${style}`}
       style={{ width: '40px', height: '40px', paddingBottom: '45px' }}
     >
       <div ref={animationContainer} className="svg-animation"></div>
