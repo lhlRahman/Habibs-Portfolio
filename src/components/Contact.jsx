@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Contact = ({ light }) => {
-  const contactClass = light ? 'bg-[#51b7d3] text-white pt-4' : 'bg-[#0a192f] text-gray-300 pt-4';
-  const borderClass = light ? 'border-blue-600' : 'border-pink-600';
+  const contactClass = light ? 'bg-[#607D8B] text-white pt-4' : 'bg-[#0a192f] text-gray-300 pt-4';
+  const borderClass = light ? 'border-white' : 'border-pink-600';
   const inputClass = light ? 'bg-gray-100 text-black' : 'bg-[#ccd6f6] text-gray-700';
   const buttonClass = light ? 'text-white border-white border-2 hover:bg-gray-300 hover:border-gray-300' : 'text-white border-2 hover:bg-pink-600 hover:border-pink-600';
   

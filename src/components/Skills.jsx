@@ -15,9 +15,9 @@ import Python from '../assets/python.png';
 import TypeScript from '../assets/ts.png';
 import Neon from '../assets/neon.webp';
 const Skills = ({ light }) => {
-    const skillsClass = light ? 'bg-[#51b7d3] text-white' : 'bg-[#0a192f] text-gray-300';
-    const borderClass = light ? 'border-blue-600' : 'border-pink-600';
-    const shadowClass = light ? 'shadow-md shadow-gray-300 hover:scale-110 duration-500' : 'shadow-md shadow-[#040c16] hover:scale-110 duration-500';
+    const skillsClass = light ? 'bg-[#607D8B] text-white' : 'bg-[#0a192f] text-gray-300';
+    const borderClass = light ? 'border-white' : 'border-pink-600';
+    const shadowClass = light ? 'shadow-sm shadow-black hover:scale-110 duration-500' : 'shadow-md shadow-[#040c16] hover:scale-110 duration-500';
   
     return (
       <div className={`w-full h-3/6 ${skillsClass}`}>

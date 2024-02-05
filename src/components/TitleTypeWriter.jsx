@@ -19,9 +19,6 @@ const TitleTypeWriter = () => {
           .typeString(`A Full Stack Developer <img src="${laptop}" alt="laptop" class="inline h-8" />`)
           .pauseFor(500)
           .deleteAll()
-          .typeString(`an Air Cadet <img src="${aircadet}" alt="aircadet" class="inline h-8" />`)
-          .pauseFor(500)
-          .deleteAll()
           .start();
       }}
     />

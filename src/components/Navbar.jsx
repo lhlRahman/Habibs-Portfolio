@@ -16,8 +16,8 @@ const Navbar = (props) => {
   const handleColor = () => setLight(!light);
     
 
- const navbarClass = light ? ' bg-[#51b7d3] text-white' : 'bg-[#0a192f] text-gray-300';
- const hover = light ? '#51b7d3':'#0a192f';
+ const navbarClass = light ? ' bg-[#607D8B] text-white' : 'bg-[#0a192f] text-gray-300';
+ const hover = light ? '#93def5':'#0a192f';
  const text = light ? 'black':'#9dd9f3';
 
 
@@ -33,7 +33,7 @@ const Navbar = (props) => {
       </motion.h1>
       </div>
       {/* menu */}
-      <motion.ul className={`md:visible collapse flex ${navbarClass}`}
+      <motion.ul className={`md:visible collapse flex text-lg pt-4 ${navbarClass}`}
       initial={{ y: -1000 }}
       animate={{ y: 0 }}
       transition={{ duration: 1 }}
