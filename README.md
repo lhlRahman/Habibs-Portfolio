@@ -21,6 +21,3 @@ If you have any Inquiries email me at lhlrahman@gmail.com
    ```bash
    npm start
    ```
-
-   
-   ```
