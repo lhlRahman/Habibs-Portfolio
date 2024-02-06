@@ -33,7 +33,7 @@ const Footer = ({ light }) => {
           <div className="relative hover-target px-6 py-4 border border-white shadow-2xl w-full min-h-[50px] flex items-center justify-center">
             <div className="absolute inset-0 flex flex-col items-center justify-center">
               <h1 className={`${text} hover-initial`}>GitHub</h1>
-              <h1 className={`${text} hover-final`}><a href="https://github.com/lhlrahman" target='_blank'><HoverText text={text} hover={hover}></HoverText></a></h1>
+              <h1 className={`${text} hover-final`}><a href="https://github.com/lhlrahman" target='_blank'><HoverText text={text} hover={hover}>I Like to Code!</HoverText></a></h1>
             </div>
           </div>
           <div className="relative hover-target px-6 py-4 border border-white shadow-2xl w-full min-h-[50px] flex items-center justify-center">
