@@ -17,6 +17,7 @@ function App() {
     return storedLight !== null ? JSON.parse(storedLight) : false;
   });
 
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
@@ -38,6 +39,23 @@ function App() {
   useEffect(() => {
     localStorage.setItem('light', JSON.stringify(light));
   }, [light]);
+
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        document.title = "Habib's Portfolio";
+      } else {
+        document.title = '👋 Come back!';
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
+  }, []);
+
 
   const handleClick = () => setNav(!nav);
 
