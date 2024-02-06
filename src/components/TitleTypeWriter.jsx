@@ -19,6 +19,15 @@ const TitleTypeWriter = () => {
           .typeString(`A Full Stack Developer <img src="${laptop}" alt="laptop" class="inline h-8" />`)
           .pauseFor(500)
           .deleteAll()
+          .typeString(`A Frontend Developer`)
+          .pauseFor(500)
+          .deleteAll()
+          .typeString(`A Backend Developer`)
+          .pauseFor(500)
+          .deleteAll()
+          .typeString(`A .NET Core Developer `)
+          .pauseFor(500)
+          .deleteAll()
           .start();
       }}
     />

@@ -7,6 +7,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import { motion } from 'framer-motion';
 import FullPageTextSpinnerLoader from './components/FullSpinner';
+import Footer from './components/Footer';
 
 function App() {
   const [nav, setNav] = useState(false);
@@ -19,7 +20,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 3000);
+    }, 2000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -40,27 +41,6 @@ function App() {
 
   const handleClick = () => setNav(!nav);
 
-    // Animation Variants for the blocks
-    const blockVariants = {
-      initial: { y: 10, opacity: 0 },
-      animate: { y: 0, opacity: 1, transition: { duration: 0.8 } },
-      exit: { y: -10, opacity: 0, transition: { duration: 0.5 } }
-    };
-  
-    // Animation Variants for the text
-    const textVariants = {
-      initial: { scale: 0 },
-      animate: { 
-        scale: 1, 
-        transition: { 
-          delay: 0.8, 
-          type: "spring", 
-          stiffness: 260, 
-          damping: 20 
-        }
-      },
-      exit: { scale: 0, transition: { duration: 0.5 } }
-    };
   
     if (isLoading) {
       return (
@@ -83,6 +63,7 @@ function App() {
       <Skills light={light} />
       <Projects light={light} />
       <Contact light={light} />
+      <Footer light={light} />
     </motion.div>
   );
 }

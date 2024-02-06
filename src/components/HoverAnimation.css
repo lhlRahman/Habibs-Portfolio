@@ -1,0 +1,31 @@
+.hover-target {
+    overflow: hidden; /* Ensures that the sliding text is clipped */
+  }
+  
+  .hover-initial,
+  .hover-final {
+    transition: transform 0.5s ease;
+    transform: translateY(0%);
+  }
+  
+  .hover-target:hover .hover-initial {
+    transform: translateY(100%); /* Moves the initial text down */
+    opacity: 0; /* Hides the initial text */
+  }
+  
+  .hover-target:hover .hover-final {
+    transform: translateY(0); /* Brings the final text up */
+  }
+  
+  .hover-final {
+    transform: translateY(-100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
