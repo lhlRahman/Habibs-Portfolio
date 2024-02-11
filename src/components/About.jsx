@@ -2,8 +2,8 @@ import React from 'react';
 import WordRotate from './WordRotate';
 
 const About = ({ light }) => {
-  const aboutClass = light ? 'bg-[#607D8B] text-white' : 'bg-[#0a192f] text-gray-300';
-  const borderClass = light ? 'border-white' : 'border-pink-600';
+  const aboutClass = light ? 'bg-[#607D8B] text-white duration-300' : 'bg-[#0a192f] text-gray-300 duration-300';
+  const borderClass = light ? 'border-white duration-300' : 'border-pink-600 duration-300';
   
   return (
       <div>

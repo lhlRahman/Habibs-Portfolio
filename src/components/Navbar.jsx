@@ -16,9 +16,9 @@ const Navbar = (props) => {
   const handleColor = () => setLight(!light);
     
 
- const navbarClass = light ? ' bg-[#607D8B] text-white' : 'bg-[#0a192f] text-gray-300';
- const hover = light ? '#93def5':'#0a192f';
- const text = light ? 'black':'#9dd9f3';
+ const navbarClass = light ? ' bg-[#607D8B] text-white duration-300' : 'bg-[#0a192f] text-gray-300 duration-300';
+ const hover = light ? '#93def5 duration-300':'#0a192f duration-300';
+ const text = light ? 'black duration-300':'#9dd9f3 duration-300';
 
 
   return (

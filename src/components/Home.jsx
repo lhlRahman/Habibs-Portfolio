@@ -5,9 +5,9 @@ import WordRotate from './WordRotate';
 import Button from './Button';
 
 const Home = ({ light }) => {
-  const homeClass = light ? 'bg-[#607D8B] text-white' : 'bg-[#0a192f] text-blue-50';
+  const homeClass = light ? 'bg-[#607D8B] text-white duration-300' : 'bg-[#0a192f] text-blue-50 duration-300';
   const titleClass = light ? 'text-white' : 'text-[#ccd6f6]';
-  const subTitleClass = light ? 'text-white' : 'text-[#8892b0]';
+  const subTitleClass = light ? 'text-white duration-300' : 'text-[#8892b0] duration-300';
   const hoverClass = light ? 'hover:text-blue-900' : 'hover:text-red-900';
 
 

@@ -2,11 +2,11 @@ import { data } from "../data/data.js";
 
 const Projects = ({ light }) => {
   const project = data;
-  const projectsClass = light ? 'bg-[#607D8B] text-white' : 'bg-[#0a192f] text-gray-300';
-  const borderClass = light ? 'border-white' : 'border-pink-600';
-  const shadowClass = light ? 'shadow-sm shadow-[#607D8B]' : 'shadow-lg shadow-[#040c16]';
-  const projectTextClass = light ? 'text-black' : 'text-[#0a192f]';
-  const buttonClass = light ? 'bg-gray-300 text-gray-700' : 'bg-white text-gray-700';
+  const projectsClass = light ? 'bg-[#607D8B] text-white duration-300' : 'bg-[#0a192f] text-gray-300 duration-300';
+  const borderClass = light ? 'border-white duration-300' : 'border-pink-600 duration-300';
+  const shadowClass = light ? 'shadow-sm shadow-[#607D8B] duration-300' : 'shadow-lg shadow-[#040c16] duration-300';
+  const projectTextClass = light ? 'text-black duration-300' : 'text-[#0a192f] duration-300';
+  const buttonClass = light ? 'bg-gray-300 text-gray-700 duration-300' : 'bg-white text-gray-700 duration-300';
 
   return (
     <section className={`w-full h-3/6 ${projectsClass}`}>
