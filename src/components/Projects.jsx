@@ -5,7 +5,7 @@ const Projects = ({ light }) => {
   const projectsClass = light ? 'bg-[#607D8B] text-white duration-300' : 'bg-[#0a192f] text-gray-300 duration-300';
   const borderClass = light ? 'border-white duration-300' : 'border-pink-600 duration-300';
   const shadowClass = light ? 'shadow-sm shadow-[#607D8B] duration-300' : 'shadow-lg shadow-[#040c16] duration-300';
-  const projectTextClass = light ? 'text-black duration-300' : 'text-[#0a192f] duration-300';
+  const projectTextClass = light ? 'text-blue-500 duration-300' : 'text-[#0a192f] duration-300';
   const buttonClass = light ? 'bg-gray-300 text-gray-700 duration-300' : 'bg-white text-gray-700 duration-300';
 
   return (
@@ -21,7 +21,7 @@ const Projects = ({ light }) => {
         <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4'>
           {/* Grid Items */}
           {project.map((item, index) => (
-            <article key={index} className={`${borderClass} hover:scale-110 duration-300 shadow-xl rounded-2xl group hover:${projectsClass}`}>
+            <article key={index} className={`${borderClass} hover:scale-105 duration-300 shadow-xl rounded-2xl group hover:${projectsClass}`}>
               <div
                 style={{
                   backgroundImage: `url(${item.image})`,
@@ -50,7 +50,7 @@ const Projects = ({ light }) => {
                 </div>
               </div>
               <div className="text-center">
-                <h3 className='text-xl font-bold tracking-wider group-hover:-translate-y-14 group-hover:text-black duration-300'>
+                <h3 className='group-hover:bg-white hover:border text-xl font-bold tracking-wider group-hover:-translate-y-14 group-hover:text-black duration-300'>
                   {item.name}
                 </h3>
               </div>

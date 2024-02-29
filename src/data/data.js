@@ -3,7 +3,7 @@ import LocalMarket from '../assets/localmarket.png'
 import Habibsblog from '../assets/habibblog.png'
 import Photolabs from '../assets/photolabs.png'
 import Odyssey from '../assets/odysseylogo.png'
-
+import Skillsync from '../assets/SkillSync.png'
 export const data=[
     {
         id:1,
@@ -39,6 +39,13 @@ export const data=[
         image:Photolabs,
         github:"https://github.com/lhlRahman/photolabs-starter",
         live:"",
+    },
+    {
+        id:6,
+        name:"SkillSync Volunteer",
+        image:Skillsync,
+        github:"https://github.com/lhlRahman/skillsync",
+        live:"https://skillsync-three.vercel.app/",
     },
 
 

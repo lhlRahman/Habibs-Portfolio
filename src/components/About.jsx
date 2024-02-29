@@ -1,5 +1,6 @@
 import React from 'react';
 import WordRotate from './WordRotate';
+import HoverText from './HoverText';
 
 const About = ({ light }) => {
   const aboutClass = light ? 'bg-[#607D8B] text-white duration-300' : 'bg-[#0a192f] text-gray-300 duration-300';
@@ -23,7 +24,7 @@ const About = ({ light }) => {
               </div>
               <div>
                 <p className='font-serif font'>
-                  I am currently a first year Computer Science student at Toronto Metropolitan University (Formerly known as Ryerson). When I'm not forced into coding at school, I code in my free time, working on my projects. I love to learn new things and work with new technologies, I'm always looking for new opportunities to learn and grow. I'm currently looking for a internship for the summer of 2024.
+                  I am currently a first year Computer Science student at Toronto Metropolitan University (Formerly known as Ryerson). When I am not coding at school, I code in my free time, working on my projects and attending hackathons. I love to learn new things and work with new technologies, I'm always looking for new opportunities to learn and grow. I'm currently looking for a internship for the summer of 2024.
                 </p>  
                 <hr className='my-8' name='skills' />
               </div>

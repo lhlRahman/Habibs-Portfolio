@@ -17,7 +17,7 @@ import Neon from '../assets/neon.webp';
 const Skills = ({ light }) => {
     const skillsClass = light ? 'bg-[#607D8B] text-white duration-300' : 'bg-[#0a192f] text-gray-300 duration-300';
     const borderClass = light ? 'border-white duration-300' : 'border-pink-600 duration-300';
-    const shadowClass = light ? 'shadow-sm shadow-black hover:scale-110 duration-500' : 'shadow-md shadow-[#040c16] hover:scale-110 duration-500';
+    const shadowClass = light ? 'shadow-sm shadow-[#040c16] hover:scale-110 duration-500' : 'shadow-md shadow-[#040c16] hover:scale-110 duration-500';
   
     return (
       <div className={`w-full h-3/6 ${skillsClass}`}>
@@ -29,14 +29,6 @@ const Skills = ({ light }) => {
   
           <div className='w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8'>
             {/* Skill items with shadowClass applied */}
-            <div className={shadowClass}>
-            <img className='w-20 h-[80px] mx-auto' src={HTML} alt="HTML" />
-            <p className='my-4'>HTML</p>
-            </div>
-            <div className={shadowClass}>
-            <img className='w-20 h-[80px] mx-auto' src={CSS} alt="CSS" />
-            <p className='my-4'>CSS</p>
-            </div>
             <div className={shadowClass}>
             <img className='w-20 h-[80px] mx-auto' src={JavaScript} alt="JavaScript" />
             <p className='my-4'>JavaScript</p>
@@ -56,6 +48,14 @@ const Skills = ({ light }) => {
             <div className={shadowClass}>
             <img className='w-20 h-[80px] mx-auto' src={Python} alt="Python" />
             <p className='my-4'>Python</p>
+            </div>
+            <div className={shadowClass}>
+            <img className='w-20 h-[80px] mx-auto' src={HTML} alt="HTML" />
+            <p className='my-4'>HTML</p>
+            </div>
+            <div className={shadowClass}>
+            <img className='w-20 h-[80px] mx-auto' src={CSS} alt="CSS" />
+            <p className='my-4'>CSS</p>
             </div>
             <div className={shadowClass}>
             <img className='w-20 h-[80px] mx-auto' src={GitHub} alt="GitHub" />
