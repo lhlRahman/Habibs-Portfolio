@@ -25,9 +25,6 @@ const TitleTypeWriter = () => {
           .typeString(`A Backend Developer`)
           .pauseFor(500)
           .deleteAll()
-          .typeString(`A .NET Core Developer `)
-          .pauseFor(500)
-          .deleteAll()
           .start();
       }}
     />

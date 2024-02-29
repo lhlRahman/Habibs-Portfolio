@@ -24,8 +24,7 @@ const About = ({ light }) => {
               </div>
               <div>
                 <p className='font-serif font'>
-                  I am currently a first year Computer Science student at Toronto Metropolitan University (Formerly known as Ryerson). When I am not coding at school, I code in my free time, working on my projects and attending hackathons. I love to learn new things and work with new technologies, I'm always looking for new opportunities to learn and grow. I'm currently looking for a internship for the summer of 2024.
-                </p>  
+                I am currently a Computer Science student at Toronto Metropolitan University (formerly known as Ryerson). When I am not coding at school, I spend my free time working on personal projects and attending hackathons. If I were not pursuing computer science, I would have  joined the Royal Canadian Air Force. I love learning new things and working with new technologies. I'm always on the lookout for new opportunities to learn and grow. Currently, I am seeking an Opportunites for 2024.                </p>  
                 <hr className='my-8' name='skills' />
               </div>
             </div>
