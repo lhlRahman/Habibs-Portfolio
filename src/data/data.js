@@ -4,6 +4,7 @@ import Habibsblog from '../assets/habibblog.png'
 import Photolabs from '../assets/photolabs.png'
 import Odyssey from '../assets/odysseylogo.png'
 import Skillsync from '../assets/SkillSync.png'
+import PledgePath from '../assets/PledgePath.webp'
 export const data=[
     {
         id:1,
@@ -20,25 +21,11 @@ export const data=[
         live:"https://note-tion-ai.vercel.app/",
     },
     {
-        id:3,
-        name:"Local Market",
-        image:LocalMarket,
-        github:"https://github.com/lhlRahman/LocalMarket",
-        live:"",
-    },
-    {
         id:4,
         name:"Habib's Blog",
         image: Habibsblog,
         github:"https://github.com/lhlRahman/MyBlog",
         live:"https://whoishabib.wiki/",
-    },
-    {
-        id:5,
-        name:"Photolabs",
-        image:Photolabs,
-        github:"https://github.com/lhlRahman/photolabs-starter",
-        live:"",
     },
     {
         id:6,
@@ -47,6 +34,25 @@ export const data=[
         github:"https://github.com/lhlRahman/skillsync",
         live:"https://skillsync-three.vercel.app/",
     },
-
-
+    {
+        id:7,
+        name:"Pledge Path",
+        image:PledgePath,
+        github:"https://github.com/ArshiaZr/pledges",
+        live:"",
+    },
+    {
+        id:3,
+        name:"Local Market",
+        image:LocalMarket,
+        github:"https://github.com/lhlRahman/LocalMarket",
+        live:"",
+    },
+    {
+        id:5,
+        name:"Photolabs",
+        image:Photolabs,
+        github:"https://github.com/lhlRahman/photolabs-starter",
+        live:"",
+    },
 ]
