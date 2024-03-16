@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import lottie from 'lottie-web';
-import SVGDATA from './animation.json';
+import SVGDATA from '../lottieAnimations/animation.json';
 
 export default function AnimationComponent({ light, setLight, style }) {
   const animationContainer = useRef(null);

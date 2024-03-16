@@ -10,7 +10,12 @@ import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
 import AnimationComponent from './light';
+import LottieAnimation from './LottiePlayer';
+import LinkedinLottie from '../lottieAnimations/linkedin.json';
+import GithubLottie from '../lottieAnimations/github.json';
+import MailLottie from '../lottieAnimations/email.json';
 import HoverText from './HoverText';
+
 const Navbar = (props) => {
   const { nav, light, setLight, handleClick} = props
   const handleColor = () => setLight(!light);
@@ -127,32 +132,32 @@ const Navbar = (props) => {
       {/* Social icons */}
       <div className='collapse lg:flex lg:visible fixed flex-col top-[35%] left-0'>
         <ul>
-          <li className='w-[170px] h-[60px] flex justify-between items-center ml-[-110px] hover:ml-[0px] duration-300 bg-blue-600'>
+          <li className='w-[170px] h-[60px] flex justify-between items-center ml-[-110px] hover:ml-[0px] duration-300 bg-[#1060a6]'>
             <a
               className='ml-2 flex justify-between items-center w-full text-gray-300 '
               href='https://www.linkedin.com/in/habib-rahman-tmu/'
               target='_blank'
               rel='noreferrer'
             >
-              Linkedin <FaLinkedin className='mr-4' size={30} />
+              Linkedin <LottieAnimation SVGDATA={LinkedinLottie}/>
             </a>
           </li>
-          <li className='w-[170px] h-[60px] flex justify-between items-center ml-[-110px] hover:ml-[0px] duration-300 bg-[#333333]'>
+          <li className='w-[170px] h-[60px] flex justify-between items-center ml-[-110px] hover:ml-[0px] duration-300 bg-[#000000]'>
             <a
               className='ml-2 flex justify-between items-center w-full text-gray-300 '
               href='https://github.com/lhlRahman'
               target='_blank'
               rel='noreferrer'
             >
-              GitHub <FaGithub className='mr-4' size={30} />
+              GitHub <LottieAnimation SVGDATA={GithubLottie}/>
             </a>
           </li>
-          <li className='w-[170px] h-[60px] flex justify-between items-center ml-[-110px] hover:ml-[0px] duration-300 bg-[#6fc2b0]'>
+          <li className='w-[170px] h-[60px] flex justify-between items-center ml-[-110px] hover:ml-[0px] duration-300 bg-[#c8f5fa]'>
             <a
               className='ml-2 flex justify-between items-center w-full text-gray-300 '
               href='mailto:habib.rahman@toroontomu.ca'
             >
-              Email <HiOutlineMail className='mr-4' size={30} />
+              Email <LottieAnimation SVGDATA={MailLottie}/>
             </a>
           </li>
           <li className='w-[170px] h-[60px] flex justify-between items-center ml-[-110px] hover:ml-[0px] duration-300 bg-[#565f69]'>
