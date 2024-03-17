@@ -26,7 +26,7 @@ const Blog = ({ light }) => {
         {blogPosts.map((post, index) => (
           <div key={index} onClick={ () => handleClick(post.link)} className={`mb-8 p-6 hover:scale-105 scale-100 duration-300 ${cardBackground} rounded-lg shadow-lg border ${borderColor}`}>
             <h2 className={`text-2xl font-bold mb-2 hover:underline`}>
-              <Link className={`font-inter ${textColor} lowercase`} to={post.link}>{post.title}</Link>
+              <Link className={`font-inter ${textColor} lowercase`}>{post.title}</Link>
             </h2>
             <p className='text-gray-500 mb-4'>{post.description}</p>
             <p className={`text-sm ${textColor} text-right`}>{post.date}</p>
