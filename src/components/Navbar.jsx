@@ -2,10 +2,7 @@ import React from 'react';
 import {
   FaBars,
   FaTimes,
-  FaGithub,
-  FaLinkedin
 } from 'react-icons/fa';
-import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
@@ -68,6 +65,11 @@ const Navbar = (props) => {
           <HoverText color={hover} text={text}>Contact</HoverText>
           </Link>
         </li>
+        <li className='mr-4'>
+          <a href='/blog'>
+          <HoverText color={hover} text={text}>Blog</HoverText>
+          </a>
+        </li>
       </motion.ul>
 
         <AnimationComponent
@@ -118,6 +120,12 @@ const Navbar = (props) => {
           <Link onClick={handleClick} to='contact' smooth={true} duration={500} className="">
           <HoverText>Contact</HoverText>
           </Link>
+        </li>
+        <li className='py-6 text-4xl'>
+        <a href='/blog'>
+          {' '}
+          <HoverText color={hover} text={text}>Blog</HoverText>
+          </a>
         </li>
         <li>
         <AnimationComponent

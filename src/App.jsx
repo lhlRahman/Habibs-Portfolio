@@ -8,6 +8,10 @@ import Contact from './components/Contact';
 import { motion } from 'framer-motion';
 import FullPageTextSpinnerLoader from './components/FullSpinner';
 import Footer from './components/Footer';
+import Blog from './components/Blog';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Leetcode from './BlogPosts/Leetcode';
+
 
 function App() {
   const [nav, setNav] = useState(false);
@@ -58,32 +62,40 @@ function App() {
 
 
   const handleClick = () => setNav(!nav);
-
+  const currentUrl = window.location.href;
   
-    if (isLoading) {
-      return (
-        <section className="w-full h-screen flex flex-col items-center justify-center bg-gradient-to-r  animate-pulse">
-           <FullPageTextSpinnerLoader />
-        </section>
-      );
-    }
+  if (isLoading && (currentUrl === "http://localhost:3000" || currentUrl === "http://localhost:3000/" || currentUrl === "https://habibrahman.xyz" || currentUrl === "https://habibrahman.xyz/" || currentUrl === "https://www.habibrahman.xyz" || currentUrl === "https://www.habibrahman.xyz/")) {
+    return (
+      <section className="w-full h-screen flex flex-col items-center justify-center bg-gradient-to-r  animate-pulse">
+         <FullPageTextSpinnerLoader />
+      </section>
+    );
+  }
 
-  return (
-    <motion.div className="App"
-        initial={{ opacity: 0, y: 15 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: 15 }}
-        transition={{ duration: 1, ease: "easeOut" }}
-    >
-      <Navbar nav={nav} setNav={setNav} handleClick={handleClick} light={light} setLight={setLight} />
-      <Home light={light} />
-      <About light={light} />
-      <Skills light={light} />
-      <Projects light={light} />
-      <Contact light={light} />
-      <Footer light={light} />
-    </motion.div>
-  );
+    return (
+      <Router>
+        <motion.div className="App"
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 15 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >
+          <Navbar nav={nav} setNav={setNav} handleClick={handleClick} light={light} setLight={setLight} />
+          <Routes>
+            <Route path="/" element={<>
+              <Home light={light} />
+              <About light={light} />
+              <Skills light={light} />
+              <Projects light={light} />
+              <Contact light={light} />
+              <Footer light={light} />
+            </>} />
+            <Route path="/blog" element={<Blog light={light} />} />
+            <Route path="/blog/leetcode" element={<Leetcode light={light} />} />
+          </Routes>
+        </motion.div>
+      </Router>
+    );
 }
 
 export default App;
