@@ -28,7 +28,7 @@ const Leetcode = ({ light }) => {
                 <p className="text-lg mb-4">
                     My programming journey began in grade 12 with a competition called the Canadian Computing Competition,
                     hosted by the University of Waterloo. Knowing some Java, I decided to participate and managed to solve
-                    1 out of 5 questions. That's when I discovered data structures and algorithms.
+                    1 out of 5 questions. That's when I discovered data structures and algorithms, and the fact that I was not good at it lol.
                 </p>
                 <p className="text-lg mb-4">
                     During my first semester at university, I learned a bit of Python and started solving LeetCode problems for fun.
