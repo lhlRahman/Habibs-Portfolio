@@ -12,27 +12,26 @@ import Blog from './components/Blog';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Leetcode from './BlogPosts/Leetcode';
 
-
 function App() {
   const [nav, setNav] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
+  // Assume isLoading should be true initially only if it's not stored in sessionStorage
+  const [isLoading, setIsLoading] = useState(!sessionStorage.getItem('loadingShown'));
   const [light, setLight] = useState(() => {
     const storedLight = localStorage.getItem('light');
     return storedLight !== null ? JSON.parse(storedLight) : false;
   });
 
-
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-    return () => clearTimeout(timer);
-  }, []);
-
-
-  useEffect(() => {
-    localStorage.setItem('nav', JSON.stringify(nav));
-  }, [nav]);
+    if (isLoading) {
+      // Set a timeout for the spinner to hide
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+        // Once loading is finished, set 'loadingShown' in sessionStorage
+        sessionStorage.setItem('loadingShown', 'true');
+      }, 1000);
+      return () => clearTimeout(timer);
+    }
+  }, [isLoading]);
 
   useEffect(() => {
     localStorage.setItem('light', JSON.stringify(light));
@@ -49,47 +48,44 @@ function App() {
 
     document.addEventListener('visibilitychange', handleVisibilityChange);
 
-    return () => {
-      document.removeEventListener('visibilitychange', handleVisibilityChange);
-    };
+    return () => document.removeEventListener('visibilitychange', handleVisibilityChange);
   }, []);
 
-
   const handleClick = () => setNav(!nav);
-  const currentUrl = window.location.href;
-  
-  if (isLoading && (currentUrl === "http://localhost:3000" || currentUrl === "http://localhost:3000/" || currentUrl === "https://habibrahman.xyz" || currentUrl === "https://habibrahman.xyz/" || currentUrl === "https://www.habibrahman.xyz" || currentUrl === "https://www.habibrahman.xyz/")) {
+
+  // If isLoading is true, show the loading spinner
+  if (isLoading) {
     return (
-      <section className="w-full h-screen flex flex-col items-center justify-center bg-gradient-to-r  animate-pulse">
+      <section className="w-full h-screen flex flex-col items-center justify-center bg-gradient-to-r animate-pulse">
          <FullPageTextSpinnerLoader />
       </section>
     );
   }
 
-    return (
-      <Router>
-        <motion.div className="App"
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 15 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-        >
-          <Navbar nav={nav} setNav={setNav} handleClick={handleClick} light={light} setLight={setLight} />
-          <Routes>
-            <Route path="/" element={<>
-              <Home light={light} />
-              <About light={light} />
-              <Skills light={light} />
-              <Projects light={light} />
-              <Contact light={light} />
-              <Footer light={light} />
-            </>} />
-            <Route path="/blog" element={<Blog light={light} />} />
-            <Route path="/blog/leetcode" element={<Leetcode light={light} />} />
-          </Routes>
-        </motion.div>
-      </Router>
-    );
+  return (
+    <Router>
+      <motion.div className="App"
+        initial={{ opacity: 0, y: 15 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 15 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+      >
+        <Navbar nav={nav} setNav={setNav} handleClick={handleClick} light={light} setLight={setLight} />
+        <Routes>
+          <Route path="/" element={<>
+            <Home light={light} />
+            <About light={light} />
+            <Skills light={light} />
+            <Projects light={light} />
+            <Contact light={light} />
+            <Footer light={light} />
+          </>} />
+          <Route path="/blog" element={<Blog light={light} />} />
+          <Route path="/blog/leetcode" element={<Leetcode light={light} />} />
+        </Routes>
+      </motion.div>
+    </Router>
+  );
 }
 
 export default App;

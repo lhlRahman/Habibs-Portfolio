@@ -12,11 +12,23 @@ import LinkedinLottie from '../lottieAnimations/linkedin.json';
 import GithubLottie from '../lottieAnimations/github.json';
 import MailLottie from '../lottieAnimations/email.json';
 import HoverText from './HoverText';
+import { useNavigate } from 'react-router-dom';
+
 
 const Navbar = (props) => {
   const { nav, light, setLight, handleClick} = props
   const handleColor = () => setLight(!light);
-    
+
+  const navigate = useNavigate();
+
+  const handleHistory = () => {
+    if (window.location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        window.location.href = '/';
+      }, 0);
+    }
+  }
 
  const navbarClass = light ? ' bg-[#607D8B] text-white duration-300' : 'bg-[#0a192f] text-gray-300 duration-300';
  const hover = light ? '#607D8B':'#0a192f';
@@ -43,27 +55,27 @@ const Navbar = (props) => {
       transition={{ duration: 1 }}
       >
         <li className='mr-4'>
-          <Link to='home' smooth={true} duration={500} className="">
+        <Link to='home' onClick={() => handleHistory()} smooth={true} duration={500} className="">
           <HoverText color={hover} text={text}>Home</HoverText>
           </Link>
         </li>
         <li className='mr-4'>
-          <Link to='about' smooth={true} duration={500} className="">
+        <Link to='about' onClick={() => handleHistory()} smooth={true} duration={500} className="">
           <HoverText color={hover} text={text}>About</HoverText>
           </Link>
         </li>
         <li className='mr-4'>
-          <Link to='skills' smooth={true} duration={500} className="">
+        <Link to='skills' onClick={() => handleHistory()} smooth={true} duration={500} className="">
           <HoverText color={hover} text={text}>Skills</HoverText>
           </Link>
         </li>
         <li className='mr-4'>
-          <Link to='work' smooth={true} duration={500} className="">
+        <Link to='work' onClick={() => handleHistory()} smooth={true} duration={500} className="">
           <HoverText color={hover} text={text}>Projects</HoverText>
           </Link>
         </li>
         <li className='mr-4'>
-          <Link to='contact' smooth={true} duration={500} className="">
+        <Link to='contact' onClick={() => handleHistory()} smooth={true} duration={500} className="">
           <HoverText color={hover} text={text}>Contact</HoverText>
           </Link>
         </li>
