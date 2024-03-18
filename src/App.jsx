@@ -29,12 +29,6 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  useEffect(() => {
-    const storedNav = localStorage.getItem('nav');
-    if (storedNav) {
-      setNav(JSON.parse(storedNav));
-    }
-  }, []);
 
   useEffect(() => {
     localStorage.setItem('nav', JSON.stringify(nav));

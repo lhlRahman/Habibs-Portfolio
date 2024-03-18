@@ -26,17 +26,19 @@ const Navbar = (props) => {
   return (
     <div className={`fixed w-full h-[120px] shadow-sm flex justify-between items-center px-4 ${navbarClass} z-30`}>
       <div>
-      <motion.h1 className={`text-4xl font-extrabold ${navbarClass}`}
+      <motion.h1 className={`text-3xl font-extrabold ${navbarClass}`}
         initial={{ x: 10000 }}
         animate={{ x: 0 }}
         transition={{ duration: 1 }}
       >
+        <a href="/">
         <HoverText color={hover} text={text}>Habib</HoverText>
+        </a>
       </motion.h1>
       </div>
       {/* menu */}
-      <motion.ul className={`md:visible collapse flex text-lg pt-4 ${navbarClass}`}
-      initial={{ y: -1000 }}
+      <motion.ul className={`md:visible md:text-lg collapse flex text-xs pt-4 ${navbarClass}`}
+      initial={{ y: -1000, }}
       animate={{ y: 0 }}
       transition={{ duration: 1 }}
       >
